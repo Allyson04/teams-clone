@@ -2,8 +2,9 @@
     --header-color: #0A0A0A;
     --header-font-color: #424242;
     --navbar-color: #1F1F1F;
-    --navbar-font-gray: #AEAEAE;
+    --navbar-font-gray: #BDBDBD;
     --navbar-font-white: #fff;
+    --navbar-button-color: #C4314B;
 }
 
 body {
@@ -52,4 +53,57 @@ header #window-interactions-icons div {
     line-height: 20px;
     /* height: 20px; */
 
+}
+
+
+nav {
+    background: var( --navbar-color);
+    height: 8vh;
+}
+
+nav * {
+    color: var(--navbar-font-gray);
+}
+
+nav div#nav-support {
+    width: 100%;
+    /* border: 1px solid red; */
+    margin: 1.5vh 2vw;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div#nav-support * {
+    line-height: 5vh;
+}
+
+nav section#utilities {
+    width: 35vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav section#utilities #separation {
+    font-size: 4vh;
+    color: var(--header-font-color);
+}
+
+nav .nav-square {
+    font-size: 3vh;
+    margin: 0 8px;
+}
+
+nav #utilities button {
+    color: var(--navbar-font-white);
+    font-weight: 500;
+    background: var(--navbar-button-color);
+    border: none;
+    padding: 0 20px;
+    line-height: 2vh;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
 }
