@@ -58,7 +58,8 @@ header #window-interactions-icons div {
     vertical-align: middle;
 }
 
-header #window-interactions-icons div:hover {
+header #window-interactions-icons div:hover,
+nav .nav-square:hover {
     background: #383838;
 }
 
@@ -101,7 +102,8 @@ nav section#utilities #separation {
 
 nav .nav-square {
     font-size: 3vh;
-    margin: 0 8px;
+    padding: 0 8px;
+    /* border: 1px solid red; */
 }
 
 nav #utilities button {
