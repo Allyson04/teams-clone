@@ -50,13 +50,21 @@ header #window-interactions-icons {
 }
 
 header #window-interactions-icons div {
-    padding: 5px 10px;
+    width: 5vh;
+    height: 5vh;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 100%;
     /* height: 20px; */
-
+    vertical-align: middle;
 }
 
+header #window-interactions-icons div:hover {
+    background: #383838;
+}
+
+header #window-interactions-icons div:hover span {
+    color: white;
+}
 
 nav {
     background: var( --navbar-color);
