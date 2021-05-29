@@ -1,23 +1,34 @@
 const getTimeContainer = document.getElementById("current-time")
 
-minutes = 0;
-seconds = 0;
+date = [
+    //minutes in array[0]
+    0,
+    //seconds in array[1]
+    0
+]
 
 
 
 function createDate() {
     setInterval(function(){
-        seconds >= 59 ? (seconds=0, minutes++) : seconds++
-        formatDate(minutes, seconds)
+        date[0] >= 59 ? (date[0]=0, date[1]++, date[0]++) : date[0]++
+        formatDate(date)
     }, 1000)
 }
 
-function formatDate(minutes, seconds) {
-    minutes = minutes.toString().padStart(2, '0')
-    seconds = seconds.toString().padStart(2, '0')
+function formatDate(date) {
+    date.forEach(function(element, index, array) {
+      
+        array[index] = element.toString().padStart(2, '0')
+        // console.log("Element: " + element)
+        // console.log("array: " + array)
 
-    getTimeContainer.innerText = minutes + ":" + seconds
+    })
+
+    // console.log("saido da foreach: " + date)
+
+    getTimeContainer.innerText = date[1] + ":" + date[0]
 }
 
-formatDate(minutes, seconds)
+formatDate(date)
 createDate()
