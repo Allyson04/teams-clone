@@ -7,12 +7,7 @@ seconds = 0;
 
 function createDate() {
     setInterval(function(){
-        minutes >= 59 ? minutes=0 : minutes++
-        formatDate(minutes, seconds)
-    }, 60000)
-    
-    setInterval(function(){
-        seconds >= 59 ? seconds=0 : seconds++
+        seconds >= 59 ? (seconds=0, minutes++) : seconds++
         formatDate(minutes, seconds)
     }, 1000)
 }
