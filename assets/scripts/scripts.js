@@ -8,10 +8,11 @@ date = [
 ]
 
 
-
+// date[0] = 58
 function createDate() {
     setInterval(function(){
-        date[0] >= 59 ? (date[0]=0, date[1]++, date[0]++) : date[0]++
+        // console.log(date)
+        date[0] >= 59 ? (date[0]=0, date[1]++) : date[0]++
         formatDate(date)
     }, 1000)
 }
