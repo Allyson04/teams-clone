@@ -13,6 +13,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: var(--background-color);
+    position: absolute;
 }
 
 .flex-row {
@@ -25,6 +26,8 @@ header {
     height: 5vh;
     position: relative;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 header * {
@@ -71,6 +74,8 @@ header #window-interactions-icons div:hover span {
 nav {
     background: var( --navbar-color);
     height: 8vh;
+    position: relative;
+    z-index: 10;
 }
 
 nav * {
@@ -128,6 +133,8 @@ main {
     justify-content: center;
     padding-top: 20px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
 }
 
 main div#profile {
