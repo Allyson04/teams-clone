@@ -1,11 +1,12 @@
 :root {
-    --background-color: #2F2F2F;
+    --background-color: #1A1A1A;
     --header-color: #0A0A0A;
     --header-font-color: #424242;
     --navbar-color: #1F1F1F;
     --navbar-font-gray: #BDBDBD;
     --navbar-font-white: #fff;
     --navbar-button-color: #C4314B;
+    --profile-border: #9EA2FF;
 }
 
 body {
@@ -151,5 +152,5 @@ main div#profile img {
 }
 
 main div#profile img:hover {
-    box-shadow: 0 0 0px 5px var(--background-color), 0 0 2px 8px cyan;
+    box-shadow: 0 0 0px 5px var(--background-color), 0 0 0px 8px var(--profile-border), 0 0 120px -50px white
 }
