@@ -149,3 +149,7 @@ main div#profile img {
 
     margin-bottom: 20px;
 }
+
+main div#profile img:hover {
+    box-shadow: 0 0 0px 5px var(--background-color), 0 0 2px 8px cyan;
+}
