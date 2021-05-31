@@ -52,7 +52,7 @@ function addProfiles() {
 function generateProfile(element) {
     const ProfileModel = `
         <img src="https://cdn.pixabay.com/photo/2021/05/22/17/06/hybrid-6274156_960_720.jpg" alt="Foto de Perfil">
-        <section id="profile-info"  class="flex-row">
+        <section class="flex-row profile-info">
             <p id="profile-name">${element}<span id="mic-status" class="hidden">🎙️</span></p>
         </section>
     `
