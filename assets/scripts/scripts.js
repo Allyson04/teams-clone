@@ -7,8 +7,15 @@ date = [
     0
 ]
 
+names = [
+    "Allyson Eduardo",
+    "Samantha Flowers",
+    "Juliana Ribeiro",
+    "Jeff Andonuts",
+    "Sabin Renê Figaro",
+    "Crono"
+]
 
-// date[0] = 58
 function createDate() {
     setInterval(function(){
         // console.log(date)
@@ -31,5 +38,28 @@ function formatDate(date) {
     getTimeContainer.innerText = date[1] + ":" + date[0]
 }
 
+function addProfiles() {
+    names.forEach(function(element, index, array) {
+        let profile = document.createElement("div")
+        console.log("adding name " + element + " to profile " + (index+1))
+        profile.id = "profile" 
+        profile.innerHTML = generateProfile(element)
+
+        document.querySelector("main").appendChild(profile)
+    })
+}
+
+function generateProfile(element) {
+    const ProfileModel = `
+        <img src="https://cdn.pixabay.com/photo/2021/05/22/17/06/hybrid-6274156_960_720.jpg" alt="Foto de Perfil">
+        <section id="profile-info"  class="flex-row">
+            <p id="profile-name">${element}<span id="mic-status" class="hidden">🎙️</span></p>
+        </section>
+    `
+
+    return ProfileModel
+}
+
 formatDate(date)
 createDate()
+addProfiles()
