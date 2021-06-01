@@ -49,6 +49,11 @@ header h1 {
     margin: auto;
 }
 
+body:hover header h1{
+    color: white;
+    font-size: .9rem;
+}
+
 header #window-interactions-icons {
     display: flex;
     justify-content: space-between;
@@ -163,5 +168,6 @@ main div#profile img {
 }
 
 .personSpeaking {
-    box-shadow: 0 0 0px 5px var(--background-color), 0 0 0px 8px var(--profile-border), 0 0 120px -50px white
+    box-shadow: 0 0 0px 5px var(--background-color), 0 0 0px 8px var(--profile-border), 0 0 120px -50px white;
+
 }
