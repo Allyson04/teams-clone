@@ -16,6 +16,15 @@ names = [
     "Crono"
 ]
 
+formatDate(date)
+createDate()
+addProfiles()
+const getMicStatuses = document.querySelectorAll("main div section.profile-info p span")
+const getProfileImgs = document.querySelectorAll("main div img")
+
+//generating random timers to when activating function
+setInterval(changeProfileSpeaking, (Math.random()*2000))
+
 function createDate() {
     setInterval(function(){
         // console.log(date)
@@ -47,6 +56,8 @@ function addProfiles() {
 
         document.querySelector("main").appendChild(profile)
     })
+
+    profilesList = document.querySelectorAll("#profile")
 }
 
 function generateProfile(element) {
@@ -60,6 +71,13 @@ function generateProfile(element) {
     return ProfileModel
 }
 
-formatDate(date)
-createDate()
-addProfiles()
+
+
+function changeProfileSpeaking() {
+    profilesList.forEach(function(element, index, array) {
+        rdmNumber = Math.random()   
+        rdmNumberProfile = Math.random() * .4
+        rdmNumber < rdmNumberProfile ? (getMicStatuses[index].classList.remove("hidden"), getProfileImgs[index].classList.add("personSpeaking")) : (getMicStatuses[index].classList.add("hidden"), getProfileImgs[index].classList.remove("personSpeaking"))
+    })
+}
+
