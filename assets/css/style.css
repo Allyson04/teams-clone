@@ -154,6 +154,14 @@ nav section.utilitiesModal {
     white-space: nowrap;
 }
 
+nav section.utilitiesModal.interactions {
+    padding: 5px;
+}
+
+nav section.utilitiesModal.interactions label {
+    padding: 0 3px;
+}
+
 nav section.utilitiesModal ul {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
