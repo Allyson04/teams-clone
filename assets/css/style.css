@@ -167,6 +167,18 @@ main div#profile img {
     margin-bottom: 20px;
 }
 
+main div#profile .profile-info * {
+    margin: 4px;
+}
+
+main div#profile .profile-info span.info {
+    display: none;
+}
+
+main div#profile:hover .profile-info span.info {
+    display: inline;
+}
+
 .personSpeaking {
     box-shadow: 0 0 0px 5px var(--background-color), 0 0 0px 8px var(--profile-border), 0 0 120px -50px white;
 

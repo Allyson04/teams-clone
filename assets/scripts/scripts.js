@@ -19,7 +19,7 @@ names = [
 formatDate(date)
 createDate()
 addProfiles()
-const getMicStatuses = document.querySelectorAll("main div section.profile-info p span")
+const getMicStatuses = document.querySelectorAll("main div section.profile-info p span.mic")
 const getProfileImgs = document.querySelectorAll("main div img")
 
 //generating random timers to when activating function
@@ -64,7 +64,7 @@ function generateProfile(element) {
     const ProfileModel = `
         <img src="https://cdn.pixabay.com/photo/2021/05/22/17/06/hybrid-6274156_960_720.jpg" alt="Foto de Perfil">
         <section class="flex-row profile-info">
-            <p id="profile-name">${element}<span id="mic-status" class="hidden">🎙️</span></p>
+            <p id="profile-name">${element}<span id="mic-status" class="hidden mic">🎙️</span><span class="info">○○○</span></p>
         </section>
     `
 
