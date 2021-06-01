@@ -23,14 +23,45 @@
         <div id="nav-support">
             <time id="current-time">19:50</time>
             <section id="utilities"  class="flex-row">
-                    <div id="peopleInCall" class="nav-square">👥</div>
-                    <div id="chat" class="nav-square">💬</div>
-                    <div id="interactions" class="nav-square">✋</div>
-                    <div id="options" class="nav-square">○○○</div>
+                    <div class="nav-square"><input type="radio" name="peopleInCall" id="peopleInCall"><label for="peopleInCall">👥</label></div>
+                    <div class="nav-square"><input type="radio" name="chat" id="chat"><label for="chat">💬</label></div>
+                    <div class="nav-square"><input type="radio" name="interactions" id="interactions"><label for="interactions">✋</label></div>
+                    <div class="nav-square"><input type="radio" name="options" id="options"><label for="options">○○○</label>
+                        <section class="utilitiesModal options hidden">
+                            <ul>
+                                <li><span>+</span>Adicionar um Aplicativo</li>
+                            </ul>
+                            <ul>
+                                <li><span>�</span>Configurações de Dispositivo</li>
+                                <li><span>�</span>Anotações da Reunião</li>
+                                <li><span>�</span>Informações sobre a reunião</li>
+                            </ul>
+                            <ul>
+                                <li><span>�</span>Galeria</li>
+                                <li><span>�</span>Galeria Grande (Pré-visualização)</li>
+                                <li><span>�</span>Modo Juntos</li>
+                            </ul>
+                            <ul>
+                                <li><span>�</span>Galeria na parte superior</li>
+                                <li><span>�</span>Foco</li>
+                                <li><span>�</span>Tela inteira</li>
+                            </ul>
+                            <ul>
+                                <li><span>�</span>Aplicar efeitos de tela de fundo</li>
+                                <li><span>�</span>Ativar legendas ao vivo</li>
+                                <li><span>�</span>Iniciar gravação</li>
+                                <li><span>�</span>Iniciar transcrição</li>
+                            </ul>
+                            <ul>
+                                <li><span>�</span>Teclado de discagem</li>
+                                <li><span>�</span>Desativar vídeo de entrada</li>
+                            </ul>
+                        </section>
+                    </div>
                     <div id="separation">|</div>
-                    <div id="toggleCamera" class="nav-square">📷</div>
-                    <div id="toggleMic" class="nav-square">🎙</div>
-                    <div id="present" class="nav-square">📖</div>
+                    <div class="nav-square"><input type="radio" name="toggleCamera" id="toggleCamera"><label for="toggleCamera">📷</label></div>
+                    <div class="nav-square"><input type="radio" name="toggleMic" id="toggleMic"><label for="toggleMic">🎙</label></div>
+                    <div class="nav-square"><input type="radio" name="present" id="present"><label for="present">📖</label></div>
                     <button id="getOut">☎ Sair</button>
             </section>
         </div>

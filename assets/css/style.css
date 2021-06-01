@@ -115,10 +115,19 @@ nav section#utilities #separation {
     color: var(--header-font-color);
 }
 
+nav section#utilities input {   
+    display: none;
+}
+
 nav .nav-square {
     font-size: 3vh;
     padding: 0 8px;
+    position: relative;
     /* border: 1px solid red; */
+}
+
+nav .nav-square input:checked {
+    border-bottom: 2px purple solid;
 }
 
 nav #utilities button {
@@ -133,6 +142,34 @@ nav #utilities button {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+}
+
+nav section.utilitiesModal {
+    background: #292929;
+    position: absolute;
+    margin-left: -8px;
+    z-index: 20;
+
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+nav section.utilitiesModal ul {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav section.utilitiesModal ul li{
+    list-style-type: none;
+}
+
+nav section.utilitiesModal ul li:hover {
+    border: 1px solid white;
+}
+
+nav section.utilitiesModal ul li span {
+    line-height: 3vh;
+    margin: 0 5px;
 }
 
 main {
