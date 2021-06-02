@@ -154,6 +154,10 @@ nav section.utilitiesModal {
     white-space: nowrap;
 }
 
+nav .nav-square:hover section.utilitiesModal.interactions {
+    display: block;
+}
+
 nav section.utilitiesModal.interactions {
     padding: 5px;
 }
