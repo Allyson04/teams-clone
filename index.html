@@ -23,54 +23,17 @@
         <div id="nav-support">
             <time id="current-time">19:50</time>
             <section id="utilities"  class="flex-row">
-                    <div class="nav-square"><input type="radio" name="peopleInCall" id="peopleInCall"><label for="peopleInCall">👥</label></div>
-                    <div class="nav-square"><input type="radio" name="chat" id="chat"><label for="chat">💬</label></div>
-                    <div class="nav-square"><input type="radio" name="interactions" id="interactions"><label for="interactions">✋</label>
-                        <section class="utilitiesModal interactions hidden">
-                            <input class="emojis" name="ok"><label for="ok">�</label>
-                            <input class="emojis" name="heart"><label for="heart">�</label>
-                            <input class="emojis" name="claps"><label for="claps">�</label>
-                            <input class="emojis" name="laugh"><label for="laugh">�</label>
-                            <input class="emojis" name="raiseHand"><label for="raiseHand">�</label>
-                        </section>
+                    <div class="nav-square" title="Show Participants"><input type="radio" name="peopleInCall" id="peopleInCall"> <label for="peopleInCall">👥</label></div>
+                    <div class="nav-square" title="Show/hide chat"><input type="radio" name="chat" id="chat"><label for="chat">💬</label></div>
+                    <div class="nav-square"><input type="radio" name="interactions" id="interactions" disabled><label for="interactions">✋</label>
                     </div>
-                    <div class="nav-square"><input type="radio" name="options" id="options"><label for="options">○○○</label>
-                        <section class="utilitiesModal options hidden">
-                            <ul>
-                                <li><span>+</span>Adicionar um Aplicativo</li>
-                            </ul>
-                            <ul>
-                                <li><span>�</span>Configurações de Dispositivo</li>
-                                <li><span>�</span>Anotações da Reunião</li>
-                                <li><span>�</span>Informações sobre a reunião</li>
-                            </ul>
-                            <ul>
-                                <li><span>�</span>Galeria</li>
-                                <li><span>�</span>Galeria Grande (Pré-visualização)</li>
-                                <li><span>�</span>Modo Juntos</li>
-                            </ul>
-                            <ul>
-                                <li><span>�</span>Galeria na parte superior</li>
-                                <li><span>�</span>Foco</li>
-                                <li><span>�</span>Tela inteira</li>
-                            </ul>
-                            <ul>
-                                <li><span>�</span>Aplicar efeitos de tela de fundo</li>
-                                <li><span>�</span>Ativar legendas ao vivo</li>
-                                <li><span>�</span>Iniciar gravação</li>
-                                <li><span>�</span>Iniciar transcrição</li>
-                            </ul>
-                            <ul>
-                                <li><span>�</span>Teclado de discagem</li>
-                                <li><span>�</span>Desativar vídeo de entrada</li>
-                            </ul>
-                        </section>
+                    <div class="nav-square" title="More actions"><input type="radio" name="options" id="options"><label for="options">○○○</label>
                     </div>
                     <div id="separation">|</div>
-                    <div class="nav-square"><input type="radio" name="toggleCamera" id="toggleCamera"><label for="toggleCamera">📷</label></div>
-                    <div class="nav-square"><input type="radio" name="toggleMic" id="toggleMic"><label for="toggleMic">🎙</label></div>
-                    <div class="nav-square"><input type="radio" name="present" id="present"><label for="present">📖</label></div>
-                    <button id="getOut">☎ Sair</button>
+                    <div class="nav-square"><input type="radio" name="toggleCamera" id="toggleCamera" disabled><label for="toggleCamera">📷</label></div>
+                    <div class="nav-square" title="Mute/unmute"><input type="radio" name="toggleMic" id="toggleMic" disabled><label for="toggleMic">🎙</label></div>
+                    <div class="nav-square" title="Share content"><input type="radio" name="present" id="present" disabled><label for="present">📖</label></div>
+                    <button id="getOut" title="Get out">☎ Sair</button>
             </section>
         </div>
     </nav>
