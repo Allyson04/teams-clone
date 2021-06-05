@@ -24,7 +24,41 @@
             <time id="current-time"></time>
             <section id="utilities"  class="flex-row">
                     <div class="nav-square" title="Show Participants"><input type="checkbox" name="peopleInCall" id="peopleInCall"> <label for="peopleInCall">👥</label></div>
-                    <div class="nav-square" title="Show/hide chat"><input type="checkbox" name="chat" id="chat"><label for="chat">💬</label></div>
+                    <div class="nav-square" title="Show/hide chat"><input type="checkbox" name="chat" id="chat"><label for="chat">💬</label>
+                        <section class="utilitiesModal chat">
+                            <div class="chat-title"><h4>Chat da Reunião</h4></div>
+                            <div id="chat-bar">
+                                <div class="message">
+                                    <time class="message-description">11/06/2021 17:58</time>
+                                    <p class="message-text">Message</p>
+                                </div>
+                                <div class="message">
+                                    <time class="message-description">11/06/2021 17:58</time>
+                                    <p class="message-text">Message</p>
+                                </div>
+                                <div class="message">
+                                    <time class="message-description">11/06/2021 17:58</time>
+                                    <p class="message-text">Message</p>
+                                </div>
+                                <div class="message">
+                                    <time class="message-description">11/06/2021 17:58</time>
+                                    <p class="message-text">Message</p>
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Digite uma nova mensagem">
+                            <div class="other-functions-chat">
+                                <span>�</span>
+                                <span>�</span>
+                                <span>�</span>
+                                <span>�</span>
+                                <span>�</span>
+                                <span>�</span>
+                                <span>○○○</span>
+                                <input type="button" name="sendMessage" id="sendMessage"><label for="sendMessage">➤</label>
+                            </div>
+                            
+                        </section>
+                    </div>
                     <div class="nav-square"><input type="checkbox" name="interactions" id="interactions" disabled><label for="interactions">✋</label>
                         <section class="utilitiesModal interactions hidden">
                             <input class="emojis" name="ok"><label for="ok">�</label>

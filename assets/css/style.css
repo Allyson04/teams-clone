@@ -122,7 +122,7 @@ nav section#utilities input[type=checkbox] {
 nav .nav-square {
     font-size: 3vh;
     padding: 0 8px;
-    position: relative;
+    /* position: relative; */
     /* border: 1px solid red; */
 }
 
@@ -144,9 +144,76 @@ nav #utilities button {
     -o-border-radius: 2px;
 }
 
+/* chat below */
+
+nav section.chat {
+    position: absolute;
+    width: 23vw;
+    top: 100%;
+    right: 0;
+    background: #1f1f1f;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: white;
+
+
+    padding: 20px;
+}
+
+nav section.chat .chat-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav section.chat #chat-bar {
+    margin: 10px;
+}
+
+nav section.chat #chat-bar .message {
+    flex-wrap: wrap;
+    flex-direction: column;
+    background:#323348;
+    margin: 5px 0;
+    border-radius: 4px 4px 0 4px;
+    -webkit-border-radius: 4px 4px 0 4px;
+    -moz-border-radius: 4px 4px 0 4px;
+    -ms-border-radius: 4px 4px 0 4px;
+    -o-border-radius: 4px 4px 0 4px;
+    text-align: end;
+    /*border: 1px solid red;*/
+
+    padding-right: 10px;
+}
+
+nav section.chat label {
+    float: right;
+}
+
+nav section.chat #chat-bar time {
+    color: #62636F;
+    font-size: 13px;
+}
+
+nav section.chat input[type=text] {
+    width: 95%;
+
+    border: 1px solid red;
+    background: #292929;
+
+    margin: 10px;
+}
+
+nav section.chat .other-functions-chat {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav section.chat input[type=button] {
+    display: none;
+}
 
 /* options below */
-nav section.utilitiesModal {
+nav section.options {
     background: #292929;
     position: absolute;
     margin-left: -8px;
