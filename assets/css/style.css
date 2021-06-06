@@ -84,7 +84,8 @@ nav {
     background: var( --navbar-color);
     height: 8vh;
     position: relative;
-    z-index: 10;
+
+    box-shadow: 0px -20px 30px 8px black;
 }
 
 nav * {
@@ -148,7 +149,6 @@ nav section.utilitiesModal {
     background: #292929;
     position: absolute;
     margin-left: -8px;
-    z-index: 20;
 
     font-size: 1rem;
     white-space: nowrap;
@@ -165,6 +165,7 @@ nav section.chat {
     white-space: nowrap;
     font-size: 1rem;
     color: white;
+    z-index: -5;
 
 
     padding: 20px;
@@ -278,7 +279,7 @@ main {
     padding-top: 20px;
     flex-wrap: wrap;
     position: relative;
-    z-index: 5;
+    z-index: -10;
 }
 
 main div#profile {
