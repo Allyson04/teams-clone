@@ -23,7 +23,7 @@ const getMicStatuses = document.querySelectorAll("main div section.profile-info 
 const getProfileImgs = document.querySelectorAll("main div img")
 
 //generating random timers to when activating function
-setInterval(changeProfileSpeaking, (Math.random()*2000))
+setInterval(changeProfileSpeaking, (Math.random()*4000))
 
 function createDate() {
     setInterval(function(){
@@ -81,3 +81,59 @@ function changeProfileSpeaking() {
     })
 }
 
+const utilitiesNav = document.getElementById("utilities")
+const utilitiesInputs = utilitiesNav.querySelectorAll("div.nav-square > input")
+const utilitiesModals = utilitiesNav.querySelectorAll("section.utilitiesModal")
+utilitiesInputs.forEach(function(element) {
+    element.addEventListener("change", function(event){toggleUtilitiesModal(event)})
+})
+
+// console.log(utilitiesInputs)
+function toggleUtilitiesModal(event) {
+    console.clear()
+
+    console.log(event.target.checked)
+    previousEventState = event.target.checked
+
+    for(i=0;i<utilitiesInputs.length;i++) {  
+        
+            console.log(utilitiesModals)
+            console.log(utilitiesInputs)
+            utilitiesInputs[i].checked = false
+            console.log(utilitiesNav.querySelectorAll("section.utilitiesModal")[i]);
+            if(utilitiesModals[i] != undefined){
+            utilitiesModals[i].classList.add("hidden") 
+        } 
+    }
+
+    event.target.checked = previousEventState;
+
+
+    if(event.target.checked) {
+        console.log("True!!")
+        console.log(event.target.parentElement)
+        event.target.parentElement.querySelector("section.utilitiesModal").classList.remove("hidden")
+    }
+
+    // if(event.target.checked === false) {
+    //     event.target.parentElement.classList.remove("checkedElement")
+
+    //     // console.log(event.target.parentElement.querySelector("section"))
+    //     event.target.parentElement.querySelector("section").classList.add("hidden")
+    // } else if(event.target.checked === true) {
+    //     event.target.parentElement.classList.add("checkedElement")
+
+    //     for(i=0;i<utilitiesModals.length;i++) {            
+    //         console.log(utilitesNav.querySelectorAll("section:not(.hidden)")[i]);
+
+    //         if(utilitesNav.querySelectorAll("section:not(.hidden)") == []) {
+    //             utilitesNav.querySelectorAll("section:not(.hidden)")[i].classList.add("hidden")
+    //         } else {
+    //             console.log("[] is full")
+    //         }
+    //     }
+
+    //     // console.log(event.target.parentElement.querySelector("section"))
+    //     event.target.parentElement.querySelector("section").classList.remove("hidden")
+    // }
+}
