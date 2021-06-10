@@ -13,6 +13,11 @@
     display: none;
 }
 
+input,
+label {
+    cursor: pointer;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -31,7 +36,7 @@ header {
     position: relative;
     text-align: center;
     position: relative;
-    z-index: 10;
+    z-index: 20;
 }
 
 header * {
@@ -84,8 +89,8 @@ nav {
     background: var( --navbar-color);
     height: 8vh;
     position: relative;
-
     box-shadow: 0px -20px 30px 8px black;
+
 }
 
 nav * {
@@ -96,7 +101,7 @@ nav div#nav-support {
     width: 100%;
     /* border: 1px solid red; */
     margin: 1.5vh 2vw;
-
+    z-index: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -165,7 +170,6 @@ nav section.chat {
     white-space: nowrap;
     font-size: 1rem;
     color: white;
-    z-index: -5;
 
 
     padding: 20px;
@@ -206,12 +210,18 @@ nav section.chat #chat-bar time {
 }
 
 nav section.chat input[type=text] {
-    width: 95%;
-
-    border: 1px solid red;
+    width: 90%;
+    
+    border: 1px solid black;
     background: #292929;
 
     margin: 10px;
+    padding: 5px 0 5px 15px;
+    position: relative;
+}
+
+nav section.chat input[type=text]:focus {
+    width: 100px;
 }
 
 nav section.chat .other-functions-chat {
@@ -228,7 +238,7 @@ nav section.options {
     background: #292929;
     position: absolute;
     margin-left: -8px;
-    z-index: 20;
+    z-index: -5;
 
     font-size: 1rem;
     white-space: nowrap;
