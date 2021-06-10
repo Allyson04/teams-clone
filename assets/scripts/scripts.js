@@ -92,13 +92,13 @@ utilitiesInputs.forEach(function(element) {
 function toggleUtilitiesModal(event) {
     console.clear()
 
-    console.log(event.target.checked)
+    // console.log(event.target.checked)
     previousEventState = event.target.checked
 
     for(i=0;i<utilitiesInputs.length;i++) {  
         
-            console.log(utilitiesModals)
-            console.log(utilitiesInputs)
+            // console.log(utilitiesModals)
+            // console.log(utilitiesInputs)
             utilitiesInputs[i].checked = false
             console.log(utilitiesNav.querySelectorAll("section.utilitiesModal")[i]);
             if(utilitiesModals[i] != undefined){
@@ -110,8 +110,7 @@ function toggleUtilitiesModal(event) {
 
 
     if(event.target.checked) {
-        console.log("True!!")
-        console.log(event.target.parentElement)
+        // console.log(event.target.parentElement)
         event.target.parentElement.querySelector("section.utilitiesModal").classList.remove("hidden")
     }
 
