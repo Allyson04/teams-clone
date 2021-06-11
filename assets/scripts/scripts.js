@@ -136,3 +136,43 @@ function toggleUtilitiesModal(event) {
     //     event.target.parentElement.querySelector("section").classList.remove("hidden")
     // }
 }
+
+function sendMessage() {
+    
+    messageSend = document.getElementById("messageText").value
+
+    if(messageSend != "") {
+        actualTime = new Date()
+        dd = (actualTime.getDate()).toString().padStart(2, '0')
+        mm = (actualTime.getMonth() + 1).toString().padStart(2, '0')
+        yy = (actualTime.getFullYear())
+        actualDaysMonthsYears = dd + '/' + mm + '/' +  yy
+        actualHoursMinutes = (actualTime.getHours()).toString().padStart(2, '0') + ":" + (actualTime.getMinutes()).toString().padStart(2, '0')
+        timeSend = actualDaysMonthsYears + " " + actualHoursMinutes
+        // console.log(messageSend)
+        // console.log(timeSend)
+        
+        message = createMessage(messageSend, timeSend)
+        // console.log(message)
+        
+        document.getElementById("chat-bar").appendChild(message)
+
+        document.getElementById("messageText").value = ""
+    }
+    
+}
+
+function createMessage(messageSend, timeSend) {
+    const messageTemplate = document.createElement("div")
+    messageTemplate.classList.add("message")
+
+    messageTemplate.innerHTML =
+    `
+    <time class="message-description">${timeSend}</time>
+    <p class="message-text">${messageSend}</p>
+    `
+
+
+
+    return messageTemplate
+}
