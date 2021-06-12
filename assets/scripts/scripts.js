@@ -113,28 +113,6 @@ function toggleUtilitiesModal(event) {
         // console.log(event.target.parentElement)
         event.target.parentElement.querySelector("section.utilitiesModal").classList.remove("hidden")
     }
-
-    // if(event.target.checked === false) {
-    //     event.target.parentElement.classList.remove("checkedElement")
-
-    //     // console.log(event.target.parentElement.querySelector("section"))
-    //     event.target.parentElement.querySelector("section").classList.add("hidden")
-    // } else if(event.target.checked === true) {
-    //     event.target.parentElement.classList.add("checkedElement")
-
-    //     for(i=0;i<utilitiesModals.length;i++) {            
-    //         console.log(utilitesNav.querySelectorAll("section:not(.hidden)")[i]);
-
-    //         if(utilitesNav.querySelectorAll("section:not(.hidden)") == []) {
-    //             utilitesNav.querySelectorAll("section:not(.hidden)")[i].classList.add("hidden")
-    //         } else {
-    //             console.log("[] is full")
-    //         }
-    //     }
-
-    //     // console.log(event.target.parentElement.querySelector("section"))
-    //     event.target.parentElement.querySelector("section").classList.remove("hidden")
-    // }
 }
 
 function sendMessage() {
