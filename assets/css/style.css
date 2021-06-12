@@ -292,7 +292,7 @@ main {
     z-index: -10;
 }
 
-main div#profile {
+main div.profile {
     /* border: 1px solid black; */
     margin: 0 50px;
     display: flex;
@@ -301,7 +301,7 @@ main div#profile {
     align-items: center;
 }
 
-main div#profile img {
+main div.profile img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -313,15 +313,15 @@ main div#profile img {
     margin-bottom: 20px;
 }
 
-main div#profile .profile-info * {
+main div.profile .profile-info * {
     margin: 4px;
 }
 
-main div#profile .profile-info span.info {
+main div.profile .profile-info span.info {
     display: none;
 }
 
-main div#profile:hover .profile-info span.info {
+main div.profile:hover .profile-info span.info {
     display: inline;
 }
 

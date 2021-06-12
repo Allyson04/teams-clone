@@ -51,7 +51,7 @@ function addProfiles() {
     names.forEach(function(element, index, array) {
         let profile = document.createElement("div")
         // console.log("adding name " + element + " to profile " + (index+1))
-        profile.id = "profile" 
+        profile.classList.add("profile") 
         profile.innerHTML = generateProfile(element)
 
         document.querySelector("main").appendChild(profile)
