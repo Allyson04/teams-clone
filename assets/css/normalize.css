@@ -3,5 +3,5 @@
     padding: 0;
     color: white;
     font-family: sans-serif;
-    background-origin: content-box;
+    box-sizing: content-box;
 }
