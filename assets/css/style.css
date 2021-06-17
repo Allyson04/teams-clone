@@ -368,20 +368,20 @@ nav section.utilitiesModal.interactions label {
 
 /* options section below */
 
-nav section.utilitiesModal ul {
+nav section.options ul {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
 
-nav section.utilitiesModal ul li{
+nav section.options ul li{
     list-style-type: none;
 }
 
-nav section.utilitiesModal ul li:hover {
+nav section.options ul li:hover {
     border: 1px solid white;
 }
 
-nav section.utilitiesModal ul li span {
+nav section.options ul li span {
     line-height: 3vh;
     margin: 0 5px;
 }
