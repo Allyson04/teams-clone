@@ -154,9 +154,39 @@ function createMessage(messageSend, timeSend) {
 }
 
 function createListParticipants() {
-    numberOfParticipants = document.querySelectorAll(".profile").length
+    numberOfParticipants = document.querySelectorAll(".profile")
 
-    document.getElementById("participantsNumber").innerText = numberOfParticipants
+    document.getElementById("participantsNumber").innerText = numberOfParticipants.length
+
+
+    numberOfParticipants.forEach(function(participantElement, index, array) {
+        console.log(participantElement)
+
+        profileName = participantElement.querySelector("#profile-name").innerText
+        // console.log(profileName)
+
+        profileImgSrc = participantElement.querySelector("img").getAttribute("src")
+        // console.log(profileImgSrc)
+
+        createli = document.createElement("li")
+        createli.innerHTML = generateParticipantLi(profileName, profileImgSrc)
+        // console.log(createli)
+
+
+        document.querySelector("#participants-list ul").appendChild(createli)
+    })
+
+    
+}
+
+function generateParticipantLi() {
+    templateParticipantsList = `
+        <img src="${profileImgSrc}" alt="Foto de Perfil">
+        <h6>${profileName}</h6>
+        <span>�</span>
+    `
+
+    return templateParticipantsList
 }
 
 createListParticipants()
