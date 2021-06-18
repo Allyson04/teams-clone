@@ -150,7 +150,13 @@ function createMessage(messageSend, timeSend) {
     <p class="message-text">${messageSend}</p>
     `
 
-
-
     return messageTemplate
 }
+
+function createListParticipants() {
+    numberOfParticipants = document.querySelectorAll(".profile").length
+
+    document.getElementById("participantsNumber").innerText = numberOfParticipants
+}
+
+createListParticipants()
