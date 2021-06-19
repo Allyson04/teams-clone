@@ -23,6 +23,7 @@
         <div id="nav-support">
             <time id="current-time"></time>
             <section id="utilities"  class="flex-row">
+
                     <div class="nav-square" title="Show Participants">
                         <input type="checkbox" name="peopleInCall" id="peopleInCall">
                         <label for="peopleInCall">👥</label>
@@ -33,23 +34,29 @@
                                 <h4>Participantes</h4>
                             </div>
 
-                            <div>
-                                <input type="text" name="shareMeeting">
+                            <div class="participants-inviteBar">
+                                <input type="text" name="shareMeeting" placeholder="Convidar alguém ou ligar para um número">
                                 <span>�</span>
                             </div>
 
                             <input type="button" value="Compartilhar Convite">
 
                             <section id="participants-section">
-                                <div id="participants-top">
-                                    <h5>Nesta reunião <span id="participantsNumber">(6)</span></h5>
-                                    <button>Silenciar Todos</button>
-                                </div>
-
                                 <div id="participants-list">
+                                    <div id="participants-top">  
+                                        <h5>Nesta reunião (<span id="participantsNumber"></span>)</h5>
+                                        <button>Silenciar Todos</button>
+                                    </div>
                                     <ul>
-
                                         <li>
+                                            <img src="https://cdn.pixabay.com/photo/2021/05/22/17/06/hybrid-6274156_960_720.jpg" alt="Foto de Perfil">
+                                            <h6>Allyson Eduardo</h6>
+                                            <span>�</span>
+                                        </li><li>
+                                            <img src="https://cdn.pixabay.com/photo/2021/05/22/17/06/hybrid-6274156_960_720.jpg" alt="Foto de Perfil">
+                                            <h6>Allyson Eduardo</h6>
+                                            <span>�</span>
+                                        </li><li>
                                             <img src="https://cdn.pixabay.com/photo/2021/05/22/17/06/hybrid-6274156_960_720.jpg" alt="Foto de Perfil">
                                             <h6>Allyson Eduardo</h6>
                                             <span>�</span>
@@ -75,7 +82,7 @@
 
                                         <li>
                                             <img src="https://cdn.pixabay.com/photo/2021/05/22/17/06/hybrid-6274156_960_720.jpg" alt="Foto de Perfil">
-                                            <h6>Sabin Renê Figaro/h6>
+                                            <h6>Sabin Renê Figaro</h6>
                                             <span>�</span>
                                         </li>
 
@@ -91,13 +98,24 @@
                             
                         </section>
                         </div>
-                    <div class="nav-square" title="Show/hide chat"><input type="checkbox" name="chat" id="chat"><label for="chat">💬</label>
+
+                    <div class="nav-square" title="Show/hide chat">
+
+                    <input type="checkbox" name="chat" id="chat">
+                    <label for="chat">💬</label>
+
                         <section class="utilitiesModal chat hidden">
-                            <div class="list-title"><h4>Chat da Reunião</h4></div>
+
+                            <div class="list-title">
+                                <h4>Chat da Reunião</h4>
+                            </div>
+
                             <div id="chat-bar">
                                 <!--Here is added messages-->
                             </div>
+
                             <input type="text" placeholder="Digite uma nova mensagem" id="messageText">
+
                             <div class="other-functions-chat">
                                 <span>�</span>
                                 <span>�</span>
@@ -106,65 +124,158 @@
                                 <span>�</span>
                                 <span>�</span>
                                 <span>○○○</span>
-                                <input type="button" name="sendMessage" id="sendMessage" onclick="sendMessage()"><label for="sendMessage">➤</label>
+                                <input type="button" name="sendMessage" id="sendMessage" onclick="sendMessage()">
+                                <label for="sendMessage">➤</label>
                             </div>
                             
                         </section>
                     </div>
-                    <div class="nav-square"><input type="checkbox" name="interactions" id="interactions" disabled><label for="interactions">✋</label>
+
+                    <div class="nav-square">
+
+                        <input type="checkbox" name="interactions" id="interactions" disabled>
+                        <label for="interactions">✋</label>
+
                         <section class="utilitiesModal interactions hidden">
-                            <input type="checkbox" class="emojis" name="ok"><label for="ok">�</label>
-                            <input type="checkbox" class="emojis" name="heart"><label for="heart">�</label>
-                            <input type="checkbox" class="emojis" name="claps"><label for="claps">�</label>
-                            <input type="checkbox" class="emojis" name="laugh"><label for="laugh">�</label>
-                            <input type="checkbox" class="emojis" name="raiseHand"><label for="raiseHand">�</label>
+
+                            <input type="checkbox" class="emojis" name="ok">
+                            <label for="ok">�</label>
+
+                            <input type="checkbox" class="emojis" name="heart">
+                            <label for="heart">�</label>
+
+                            <input type="checkbox" class="emojis" name="claps">
+                            <label for="claps">�</label>
+
+                            <input type="checkbox" class="emojis" name="laugh">
+                            <label for="laugh">�</label>
+
+                            <input type="checkbox" class="emojis" name="raiseHand">
+                            <label for="raiseHand">�</label>
+
                         </section>
+
                     </div>
-                    <div class="nav-square" title="More actions"><input type="checkbox" name="options" id="options"><label for="options">○○○</label>
+
+                    <div class="nav-square" title="More actions">
+
+                        <input type="checkbox" name="options" id="options">
+                        <label for="options">○○○</label>
+
                         <section class="utilitiesModal options hidden">
+
                             <ul>
-                                <li><span>+</span>Adicionar um Aplicativo</li>
+                                <li>
+                                    <span>+</span>
+                                    Adicionar um Aplicativo
+                                </li>
                             </ul>
+
                             <ul>
-                                <li><span>�</span>Configurações de Dispositivo</li>
-                                <li><span>�</span>Anotações da Reunião</li>
-                                <li><span>�</span>Informações sobre a reunião</li>
+                                <li>
+                                    <span>�</span>
+                                    Configurações de Dispositivo
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Anotações da Reunião
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Informações sobre a reunião
+                                </li>
                             </ul>
+
                             <ul>
-                                <li><span>�</span>Galeria</li>
-                                <li><span>�</span>Galeria Grande (Pré-visualização)</li>
-                                <li><span>�</span>Modo Juntos</li>
+                                <li>
+                                    <span>�</span>
+                                    Galeria
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Galeria Grande (Pré-visualização)
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Modo Juntos
+                                </li>
                             </ul>
+
                             <ul>
-                                <li><span>�</span>Galeria na parte superior</li>
-                                <li><span>�</span>Foco</li>
-                                <li><span>�</span>Tela inteira</li>
+                                <li>
+                                    <span>�</span>
+                                    Galeria na parte superior
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Foco
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Tela inteira
+                                </li>
                             </ul>
+
                             <ul>
-                                <li><span>�</span>Aplicar efeitos de tela de fundo</li>
-                                <li><span>�</span>Ativar legendas ao vivo</li>
-                                <li><span>�</span>Iniciar gravação</li>
-                                <li><span>�</span>Iniciar transcrição</li>
+                                <li>
+                                    <span>�</span>
+                                    Aplicar efeitos de tela de fundo
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Ativar legendas ao vivo
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Iniciar gravação
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Iniciar transcrição
+                                </li>
                             </ul>
+
                             <ul>
-                                <li><span>�</span>Teclado de discagem</li>
-                                <li><span>�</span>Desativar vídeo de entrada</li>
+                                <li>
+                                    <span>�</span>
+                                    Teclado de discagem
+                                </li>
+                                <li>
+                                    <span>�</span>
+                                    Desativar vídeo de entrada
+                                    </li>
                             </ul>
+
                         </section>
                     </div>
+
                     <div id="separation">|</div>
-                    <div class="nav-square"><input type="checkbox" name="toggleCamera" id="toggleCamera" disabled><label for="toggleCamera">📷</label></div>
-                    <div class="nav-square" title="Mute/unmute"><input type="checkbox" name="toggleMic" id="toggleMic" disabled><label for="toggleMic">🎙</label></div>
-                    <div class="nav-square" title="Share content"><input type="checkbox" name="present" id="present" disabled><label for="present">📖</label></div>
+
+                    <div class="nav-square">
+                        <input type="checkbox" name="toggleCamera" id="toggleCamera" disabled>
+                        <label for="toggleCamera">📷</label>
+                    </div>
+
+                    <div class="nav-square" title="Mute/unmute">
+                        <input type="checkbox" name="toggleMic" id="toggleMic" disabled>
+                        <label for="toggleMic">🎙</label>
+                    </div>
+
+                    <div class="nav-square" title="Share content">
+                        <input type="checkbox" name="present" id="present" disabled>
+                        <label for="present">📖</label>
+                    </div>
+
                     <button id="getOut" title="Get out" onclick="document.body.innerHTML=''">☎ Sair</button>
+
             </section>
         </div>
     </nav>
 
-
-
     <main>
         
+        <!--Here is added profiles-->
+
     </main>
 
     <script src="assets/scripts/scripts.js"></script>
