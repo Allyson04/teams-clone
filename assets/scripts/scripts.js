@@ -94,7 +94,7 @@ setUpFunctions = {
 
 
         numberOfParticipants.forEach(function(participantElement, index, array) {
-            console.log(participantElement)
+            // console.log(participantElement)
 
             profileName = participantElement.querySelector("#profile-name").innerText
             // console.log(profileName)
