@@ -237,6 +237,77 @@
 
     </main>
 
+    <div id="enterMeeting-modal">
+        <h2>Escolha as opções de vídeo e áudio</h2>
+        <section class="container">
+            <div class="startCamera">
+                <div class="showCamera">
+                    <p>�</p>
+                    <p>Sua câmera está desativada</p>
+                </div>
+                <div class="cameraOptions">
+                    <div>
+                        <p>�</p>
+                        <input type="checkbox">
+                    </div> |
+                    <p>Filtros de Tela de fundo</p>
+                    <p>�</p>
+                </div>
+            </div>
+
+            <div class="otherOptions">
+                <section class="computer-audio">
+                    <div class="otherOptions-top">
+                        <p>�</p>
+                        <h3>Áudio do computador</h3>
+                        <input type="radio" name="computer-audio" id="computer-audio">
+                    </div>
+
+                    <div class="otherOptions-config">
+                        <p>Microfone e Alto-falantes do PC</p>
+                        <p>�</p>
+                        <hr>
+                        <div>
+                            <p>�</p>
+                            <input type="checkbox">
+                        </div>
+                        <input type="range">
+                    </div>
+                </section>
+
+                <section class="telephone-audio">
+                    <div class="otherOptions-top">
+                        <p>�</p>
+                        <h3>Áudio do telefone</h3>
+                        <input type="radio" name="telephone-audio" id="telephone-audio" disabled>
+                    </div>
+                </section>
+
+                <section class="room-audio">
+                    <div class="otherOptions-top">
+                        <p>�</p>
+                        <h3>Áudio da sala</h3>
+                        <input type="radio" name="room-audio" id="room-audio" disabled>
+                    </div>
+                </section>
+
+                <section class="no-audio">
+                    <div class="otherOptions-top">
+                        <p>�</p>
+                        <h3>Não usar áudio</h3>
+                        <input type="radio" name="no-audio" id="no-audio">
+                    </div>
+
+                    <p>Ingresse sem som para evitar causar interrupção de áudio.</p>
+                </section>
+            </div>
+        </section>
+
+        <div class="enterMeeting-buttons">
+            <button onclick="document.body.innerHTML=''">Cancelar</button>
+            <button>Ingressar agora</button>
+        </div>
+    </div>
     <script src="assets/scripts/scripts.js"></script>
 </body>
 </html>
