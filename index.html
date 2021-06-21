@@ -237,76 +237,95 @@
 
     </main>
 
-    <div id="enterMeeting-modal">
-        <h2>Escolha as opções de vídeo e áudio</h2>
-        <section class="container">
-            <div class="startCamera">
-                <div class="showCamera">
-                    <p>�</p>
-                    <p>Sua câmera está desativada</p>
-                </div>
-                <div class="cameraOptions">
-                    <div>
+    <div class="background-modal">
+        <section id="enterMeeting-modal">
+            <h2>Escolha as opções de vídeo e áudio</h2>
+            <section class="container flex-column">
+                <div class="startCamera">
+                    <div class="showCamera">
                         <p>�</p>
-                        <input type="checkbox">
-                    </div> |
-                    <p>Filtros de Tela de fundo</p>
-                    <p>�</p>
-                </div>
-            </div>
-
-            <div class="otherOptions">
-                <section class="computer-audio">
-                    <div class="otherOptions-top">
-                        <p>�</p>
-                        <h3>Áudio do computador</h3>
-                        <input type="radio" name="computer-audio" id="computer-audio">
+                        <p>Sua câmera está desativada</p>
                     </div>
-
-                    <div class="otherOptions-config">
-                        <p>Microfone e Alto-falantes do PC</p>
-                        <p>�</p>
-                        <hr>
-                        <div>
+                    <div class="cameraOptions flex-column">
+                        <div class="flex-column">
                             <p>�</p>
-                            <input type="checkbox">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
                         </div>
-                        <input type="range">
-                    </div>
-                </section>
-
-                <section class="telephone-audio">
-                    <div class="otherOptions-top">
+                        <p>Filtros de Tela de fundo</p>
                         <p>�</p>
-                        <h3>Áudio do telefone</h3>
-                        <input type="radio" name="telephone-audio" id="telephone-audio" disabled>
                     </div>
-                </section>
+                </div>
 
-                <section class="room-audio">
-                    <div class="otherOptions-top">
-                        <p>�</p>
-                        <h3>Áudio da sala</h3>
-                        <input type="radio" name="room-audio" id="room-audio" disabled>
-                    </div>
-                </section>
+                <div class="otherOptions">
+                    <section class="computer-audio">
+                        <div class="otherOptions-top flex-column">
+                            <p>�</p>
+                            <h3>Áudio do computador</h3>
+                            <input type="radio" name="audioOption" id="computer-audio" checked="checked">
+                            <span class="checkmark"></span>
+                        </div>
 
-                <section class="no-audio">
-                    <div class="otherOptions-top">
-                        <p>�</p>
-                        <h3>Não usar áudio</h3>
-                        <input type="radio" name="no-audio" id="no-audio">
-                    </div>
+                        <div class="otherOptions-config">
+                            <div class="flex-column">
+                                <p>Microfone e Alto-falantes do PC</p>
+                                <p>�</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <div class="flex-column">
+                                    <p>�</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="flex-column">
+                                    <p>�</p>
+                                    <input type="range">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-                    <p>Ingresse sem som para evitar causar interrupção de áudio.</p>
-                </section>
+                    <section class="telephone-audio">
+                        <div class="otherOptions-top flex-column">
+                            <p>�</p>
+                            <h3>Áudio do telefone</h3>
+                            <input type="radio" name="telephone-audio" id="telephone-audio" disabled>
+                        </div>
+                    </section>
+
+                    <section class="room-audio">
+                        <div class="otherOptions-top flex-column">
+                            <p>�</p>
+                            <h3>Áudio da sala</h3>
+                            <input type="radio" name="room-audio" id="room-audio" disabled>
+                        </div>
+                    </section>
+
+                    <section class="no-audio">
+                        <div class="otherOptions-top flex-column">
+                            <p>�</p>
+                            <h3>Não usar áudio</h3>
+                            <input type="radio" name="audioOption" id="no-audio">
+                            <span class="checkmark"></span>
+                        </div>
+
+                        <div class="otherOptions-config" style="display: none;">
+                            <p>Ingresse sem som para evitar causar interrupção de áudio.</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <div class="enterMeeting-buttons">
+                <button onclick="document.body.innerHTML=''" id="buttonCancel">Cancelar</button>
+                <button id="buttonEnter">Ingressar agora</button>
             </div>
         </section>
-
-        <div class="enterMeeting-buttons">
-            <button onclick="document.body.innerHTML=''">Cancelar</button>
-            <button>Ingressar agora</button>
-        </div>
     </div>
     <script src="assets/scripts/scripts.js"></script>
 </body>
