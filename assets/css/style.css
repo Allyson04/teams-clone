@@ -441,3 +441,327 @@ main div.profile:hover .profile-info span.info {
 .checkedElement {
     border-bottom: 2px  var(--profile-border) solid;
 }
+
+
+.background-modal {
+    background: #1F1F1F;
+
+    position: absolute;
+    z-index: 18;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#enterMeeting-modal {
+    width: 950px;
+    height: 415px;
+    position: absolute;
+    top: 150px;
+    bottom: 100px;
+    right: 15%;
+}
+
+#enterMeeting-modal * {
+    color: #A9A697;
+}
+
+#enterMeeting-modal h2,
+#enterMeeting-modal h3 {
+    color: white;
+}
+
+#enterMeeting-modal h2 {
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-size: 18px; 
+}
+
+#enterMeeting-modal .container {
+    justify-content: space-between;
+    height: 350px;
+}
+
+#enterMeeting-modal .container .startCamera > *,
+#enterMeeting-modal .container .otherOptions > * {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    background: #242424;
+}
+
+#enterMeeting-modal .container > div > :first-child {
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+}
+
+#enterMeeting-modal .container > div > * {
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+    -webkit-border-radius: none;
+}
+
+#enterMeeting-modal .container > div > :last-child {
+    border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -ms-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
+}
+
+#enterMeeting-modal .container .startCamera {
+    width: 482px;
+    height: 350px;
+}
+
+#enterMeeting-modal .container .startCamera .showCamera {
+    height: 80%;
+    text-align: center;
+}
+
+#enterMeeting-modal .container .startCamera .showCamera p {
+    position: relative;
+    top: 50%;
+}
+
+#enterMeeting-modal .container .startCamera .cameraOptions {
+    display: flex;
+    height: 20%;
+    width: 482px;
+    align-items: center;
+    position: relative;
+}
+
+#enterMeeting-modal .container .startCamera .showCamera p,
+.container .startCamera .cameraOptions *:not(label *) {
+    margin: 7px;
+}
+
+#enterMeeting-modal .container .startCamera .cameraOptions > p:nth-child(2) {
+    color: #383737;
+}
+
+#enterMeeting-modal .container .startCamera .cameraOptions > p:nth-child(3) {
+    position: absolute;
+    right: 20px;
+}
+
+#enterMeeting-modal .container .otherOptions {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#enterMeeting-modal .container .otherOptions section .otherOptions-top {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#enterMeeting-modal .container .otherOptions section .otherOptions-top h3 {
+    font-size: 0.8rem;
+    margin-left: 20px;
+}
+
+#enterMeeting-modal .container .otherOptions section .otherOptions-top input {
+    position: absolute;
+    right: 30px;
+    color: green;
+}
+
+#enterMeeting-modal .container .otherOptions section .otherOptions-config {
+    border: 1px solid black;
+}
+
+#enterMeeting-modal .container .otherOptions section .otherOptions-config > *:not(hr) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* used for reference https://css-tricks.com/examples/hrs/ */
+#enterMeeting-modal .container .otherOptions section .otherOptions-config hr {
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4D4D44, rgba(0, 0, 0, 0));
+    border: 0;
+}
+
+#enterMeeting-modal .container .otherOptions section .otherOptions-config div div p {
+    margin-right: 10px;
+}
+
+#enterMeeting-modal .container .otherOptions section .otherOptions-config input[type=range] {
+    width: 250px;
+}
+
+#enterMeeting-modal .enterMeeting-buttons {
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+}
+
+#enterMeeting-modal .enterMeeting-buttons button {
+    padding: 9px 15px;
+    font-size: .95rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+#enterMeeting-modal .enterMeeting-buttons button#buttonCancel {
+    background: #1F1F1F;
+    border: 1px solid #4D4D44;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#enterMeeting-modal .enterMeeting-buttons button#buttonCancel:hover {
+    border: 1px solid #525248;
+    background: #252525;
+}
+
+#enterMeeting-modal .enterMeeting-buttons button#buttonEnter {
+    background: #6264A7;
+    border: none;
+}
+
+#enterMeeting-modal .enterMeeting-buttons button#buttonEnter:hover {
+    background: #525497;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
+}
+
+/* for range input*/
+/* Copied from https://www.w3schools.com/howto/howto_js_rangeslider.asp with few adaptations */
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #ADADAD;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+  
+  input[type=range]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+  }
+
+
+
+
+.flex-column {
+    display: flex;
+    align-items: center;
+}
+
+/* for switch toggle*/
+/* Copied from https://www.w3schools.com/howto/howto_css_switch.asp with few adaptations */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 41px;
+    height: 21px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    display: none;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #242424;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 1px solid white;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #242424;
+    border: 1px solid white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #6264A7;
+  }
+
+  input:checked + .slider:before {
+    background-color: #242424;
+    border: 1px solid  transparent;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #242424;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+}
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
