@@ -217,3 +217,10 @@ setUp = [
     setUpFunctions.addEventListenerInputs(),
     setUpFunctions.createListParticipants()
 ]
+
+function addEventToButtonModal() {
+    document.querySelector("#enterMeeting-modal").remove()
+    setTimeout(() => {
+        document.querySelector(".background-modal").remove()
+    }, 100); 
+}
