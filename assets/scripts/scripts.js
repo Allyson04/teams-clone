@@ -85,6 +85,15 @@ setUpFunctions = {
         )
     },
 
+    
+    addEventListenerStartScreen() {
+        inputsStartScreen = document.querySelectorAll("section#enterMeeting-modal div.otherOptions input[type=radio]")
+        inputsStartScreen.forEach((element, index, array) => {
+            element.addEventListener("change", () => {SelectThisAudioOption()})
+        })
+    },
+
+
     // ----------------------------------------------Participants_list---------------------------------------------------
 
     createListParticipants() {
@@ -215,6 +224,7 @@ setUp = [
     setInterval(setUpFunctions.changeProfileSpeaking, (Math.random()*4000)),
 
     setUpFunctions.addEventListenerInputs(),
+    setUpFunctions.addEventListenerStartScreen(),
     setUpFunctions.createListParticipants()
 ]
 
