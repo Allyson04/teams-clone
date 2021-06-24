@@ -89,7 +89,7 @@ setUpFunctions = {
     addEventListenerStartScreen() {
         inputsStartScreen = document.querySelectorAll("section#enterMeeting-modal div.otherOptions input[type=radio]")
         inputsStartScreen.forEach((element, index, array) => {
-            element.addEventListener("change", () => {SelectThisAudioOption()})
+            element.addEventListener("change", (e) => {utilities.SelectThisAudioOption(e.target)})
         })
     },
 
@@ -212,6 +212,17 @@ utilities = {
         `
 
         return messageTemplate
+    },
+
+    SelectThisAudioOption(elementChanged) {
+
+        console.log(elementChanged)
+        document.querySelectorAll("section#enterMeeting-modal div.otherOptions-config").forEach((element) => {
+            element.classList.add("hidden")
+        })
+
+        // console.log(elementChanged)
+        elementChanged.parentNode.parentNode.querySelector("div.otherOptions-config").classList.remove("hidden")
     }
 }
 
