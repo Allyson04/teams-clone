@@ -245,3 +245,17 @@ function addEventToButtonModal() {
         document.querySelector(".background-modal").remove()
     }, 100); 
 }
+
+function inputAudioChange(inputAudio) {
+    inputAudioSlider = document.querySelector(".otherOptions-config input[type=checkbox]")
+    inputAudioRange = document.querySelector(".otherOptions-config input[type=range]")
+    
+    if(inputAudio == inputAudioRange && inputAudioRange != 0) {
+        inputAudioSlider.checked = false
+    } else if(inputAudio == inputAudioSlider && inputAudioSlider.checked == true) {
+        inputAudioRange.value = 0
+    }
+
+    // console.log(" inputAudioSlider.value : " +  inputAudioSlider.checked)
+    // console.log(" inputAudioRange.value : " +  inputAudioRange.value)
+}
