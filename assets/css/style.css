@@ -314,7 +314,7 @@ nav section.listParticipants #participants-section ul li *{
 }
 
 nav section.listParticipants #participants-section ul li:hover {
-    border: 1px solid white;
+    box-shadow: 0px 0px 0px 1px white;
 }
 
 nav section.listParticipants #participants-section ul li span {
