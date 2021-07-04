@@ -77,22 +77,21 @@ setUpFunctions = {
     
     // ----------------------------------------------reactive_utilities---------------------------------------------------
 
-    addEventListenerInputs() {
+    addEventListenerToElements() {
+
+        // for inputs in nav bar
         utilitiesInputs.forEach(
             function(element) {
                 element.addEventListener("change", function(event){utilities.toggleUtilitiesModal(event)})
             }
         )
-    },
 
-    
-    addEventListenerStartScreen() {
         inputsStartScreen = document.querySelectorAll("section#enterMeeting-modal div.otherOptions input[type=radio]")
         inputsStartScreen.forEach((element, index, array) => {
             element.addEventListener("change", (e) => {utilities.SelectThisAudioOption(e.target)})
         })
-    },
 
+    },
 
     // ----------------------------------------------Participants_list---------------------------------------------------
 
@@ -234,8 +233,7 @@ setUp = [
     //activating randomly changeProfileSpeaking()
     setInterval(setUpFunctions.changeProfileSpeaking, (Math.random()*4000)),
 
-    setUpFunctions.addEventListenerInputs(),
-    setUpFunctions.addEventListenerStartScreen(),
+    setUpFunctions.addEventListenerToElements(),
     setUpFunctions.createListParticipants()
 ]
 
