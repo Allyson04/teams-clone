@@ -15,7 +15,7 @@
         <section id="window-interactions-icons"  class="flex-row">
             <div><span> &#8213</span></div>
             <div><span>&#9713</span></div>
-            <div onclick="document.body.innerHTML=''"><span>&#10005</span></div>
+            <div onclick="transitionSnap()"><span>&#10005</span></div>
         </section>
     </header>
 
@@ -225,7 +225,7 @@
                         <label for="present">📖</label>
                     </div>
 
-                    <button id="getOut" title="Get out" onclick="document.body.innerHTML=''">☎ Sair</button>
+                    <button id="getOut" title="Get out" onclick="transitionSnap()">☎ Sair</button>
 
             </section>
         </div>
@@ -323,7 +323,7 @@
 
             <div class="enterMeeting-buttons">
                 <button onclick="document.body.innerHTML=''" id="buttonCancel">Cancelar</button>
-                <button onclick="addEventToButtonModal()" id="buttonEnter">Ingressar agora</button>
+                <button onclick="transitionSnap(this)" id="buttonEnter">Ingressar agora</button>
             </div>
         </section>
     </div>

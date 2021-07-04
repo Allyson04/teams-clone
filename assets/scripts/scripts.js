@@ -237,11 +237,18 @@ setUp = [
     setUpFunctions.createListParticipants()
 ]
 
-function transitionSnap() {
-    document.querySelector("#enterMeeting-modal").remove()
-    setTimeout(() => {
-        document.querySelector(".background-modal").remove()
-    }, 100); 
+function transitionSnap(element) {
+    if(element == null) {
+        document.querySelectorAll("body *").forEach((element) => {element.remove()})
+        setTimeout(() => {
+            document.querySelector("body").style.background="#141414"
+        }, 100);
+    } else if(element != null) {
+        document.querySelector("#enterMeeting-modal").remove()
+        setTimeout(() => {
+            document.querySelector(".background-modal").remove()
+        }, 100); 
+    }
 }
 
 function inputAudioChange(inputAudio) {
