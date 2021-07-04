@@ -237,7 +237,7 @@ setUp = [
     setUpFunctions.createListParticipants()
 ]
 
-function addEventToButtonModal() {
+function transitionSnap() {
     document.querySelector("#enterMeeting-modal").remove()
     setTimeout(() => {
         document.querySelector(".background-modal").remove()
